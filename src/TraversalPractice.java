@@ -8,6 +8,14 @@ public class TraversalPractice {
    * @param node The root of the tree to print
    */
   public static void printOddNodes(Node<Integer> node) {
+    if (node == null) return;
+
+    printOddNodes(node.left);
+    printOddNodes(node.right);
+
+    if (node.value % 2 != 0) {
+      System.out.println(node.value);
+    }
 
   }
 
@@ -19,7 +27,17 @@ public class TraversalPractice {
    * @param node The root of the tree to print
    */
   public static void printNodesWithOneChild(Node<?> node) {
-    
+    if (node == null) return;
+
+    boolean hasLeft = node.left != null;
+    boolean hasRight = node.right != null;
+    if (hasLeft != hasRight) {  
+      System.out.println(node.value);
+    }
+
+    printNodesWithOneChild(node.left);
+    printNodesWithOneChild(node.right);
+
   }
 
     /**
