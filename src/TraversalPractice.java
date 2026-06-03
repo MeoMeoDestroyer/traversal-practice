@@ -98,7 +98,7 @@ public class TraversalPractice {
                               null,
                               new Node<>(16, null, null)));
 
-
+                              
     /*
      *              42
      *          /       \
@@ -108,7 +108,7 @@ public class TraversalPractice {
      *    /    /  \          /
      *   3    19   25     76
     */
-
+    // System.out.println(treeSum(smallTree));
     Node<Integer> largeTree = new Node<>(42,
         new Node<>(17, // 17 is left child of 42
                 new Node<>(9, // 9 is the left child of 17
